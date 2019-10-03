@@ -1,0 +1,9 @@
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\bin\Debug\Coding.exe.config
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\bin\Debug\Coding.exe
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\bin\Debug\Coding.pdb
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\obj\Debug\Coding.csprojResolveAssemblyReference.cache
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\obj\Debug\Coding.Form1.resources
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\obj\Debug\Coding.Properties.Resources.resources
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\obj\Debug\Coding.csproj.GenerateResource.Cache
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\obj\Debug\Coding.exe
+c:\users\irfansyed\documents\visual studio 2012\Projects\Coding\Coding\obj\Debug\Coding.pdb
