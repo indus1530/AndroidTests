@@ -1,3 +1,15 @@
 <resources>
+
     <string name="app_name">videoss</string>
+
+    <string name="pofpa15"> ٻار اسپتال ۾ ڪهڙو علاج حاصل ڪيو ؟ </string>
+    <string name="pofpa151a"> دوا جو نالو </string>
+    <string name="pofpa151b"> ڪيترا دفعا ڏينهن ۾ </string>
+    <string name="pofpa151c"> وزن: </string>
+    <string name="pofpa151d"> Route of administration (Oral/IV) </string>
+    <string name="pofpa151da"> وات ذريعي </string>
+    <string name="pofpa151db"> رڳ ذريعي </string>
+    <string name="pofpa152"> آڪسيجن ٿيراپي </string>
+    <string name="pofpa1597"> لاڳو نه ٿو ٿئ </string>
+
 </resources>
