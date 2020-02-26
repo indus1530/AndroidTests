@@ -1,15 +1,14 @@
 package com.example.isd.videoss;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.example.isd.videoss.databinding.ActivityMainBinding;
 
 
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     ActivityMainBinding bi;
 
