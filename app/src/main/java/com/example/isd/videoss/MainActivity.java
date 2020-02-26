@@ -2,6 +2,7 @@ package com.example.isd.videoss;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
 
@@ -41,6 +42,7 @@ public class MainActivity extends Activity {
 
         bi.check.setText((int) getDateDiff(new SimpleDateFormat("dd/MM/yyyy"), bi.date1.getText().toString(), bi.date2.getText().toString()));
 
+        Toast.makeText(this, bi.date1.getText().toString() + "date" + bi.date2.getText().toString(), Toast.LENGTH_LONG).show();
 
         /*if (formValidation()) {
             try {
