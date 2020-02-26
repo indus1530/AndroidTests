@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
         bi.date1.getText().toString();
         bi.date2.getText().toString();
 
-        bi.check.setText(getDateDiff(new SimpleDateFormat("dd/MM/yyyy"), bi.date1.getText().toString(), bi.date2.getText().toString()));
+        bi.check.setText((int) getDateDiff(new SimpleDateFormat("dd/MM/yyyy"), bi.date1.getText().toString(), bi.date2.getText().toString()));
 
 
         /*if (formValidation()) {
