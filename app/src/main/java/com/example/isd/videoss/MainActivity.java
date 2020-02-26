@@ -1,16 +1,26 @@
 package com.example.isd.videoss;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.MediaController;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import com.example.isd.videoss.databinding.ActivityMainBinding;
+
+
 
 public class MainActivity extends AppCompatActivity {
+
+    ActivityMainBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        bi.setCallback(this);
 
 
     }
+
+
 }

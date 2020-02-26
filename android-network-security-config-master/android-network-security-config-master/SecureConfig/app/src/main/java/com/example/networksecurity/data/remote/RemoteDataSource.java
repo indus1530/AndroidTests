@@ -17,7 +17,7 @@
 package com.example.networksecurity.data.remote;
 
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;

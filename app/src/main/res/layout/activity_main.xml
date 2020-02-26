@@ -24,7 +24,7 @@
 
 
     <!--pofpa15-->
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/pofpa15cv"
         style="@style/cardView"
         app:layout_constraintBottom_toBottomOf="@id/noview">
@@ -170,6 +170,6 @@
 
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </layout>

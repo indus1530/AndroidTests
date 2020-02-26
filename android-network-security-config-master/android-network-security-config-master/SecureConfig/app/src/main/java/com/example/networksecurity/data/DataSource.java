@@ -17,7 +17,7 @@
 package com.example.networksecurity.data;
 
 import android.graphics.Bitmap;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.example.networksecurity.model.Post;
 
