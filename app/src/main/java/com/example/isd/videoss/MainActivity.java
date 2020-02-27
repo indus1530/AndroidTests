@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, " Date1 " + bi.date1.getText().toString() + ",   Date2 " + bi.date2.getText().toString() + ",   Differ " + differ, Toast.LENGTH_LONG).show();
 
-            double years = differ / 365.2422 >= 1 ? differ / 365.2422 : 0;
-            double months = (differ % 365.2422) / 30 >= 1 ? (differ % 365.2422) / 30 : 0;
+            long years = differ / 365 >= 1 ? differ / 365 : 0;
+            long months = (differ % 365) / 30 >= 1 ? (differ % 365) / 30 : 0;
             //long days = months%1;
-            double days = (differ % 365.2422) % 30 >= 1 ? (differ % 365.2422) % 30 : 0;
+            long days = (differ % 365) % 30 >= 1 ? (differ % 365) % 30 : 0;
 
 
             //bi.differ.setTextColor(ContextCompat.getColor(this, R.color.white));
