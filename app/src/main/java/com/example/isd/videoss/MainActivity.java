@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
-        bi.date2.setMinDate(bi.date1.getText().toString());
 
 
     }
