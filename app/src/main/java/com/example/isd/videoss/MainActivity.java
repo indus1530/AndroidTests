@@ -7,7 +7,6 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
 import com.example.isd.videoss.databinding.ActivityMainBinding;
@@ -54,17 +53,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, " Date1 " + bi.date1.getText().toString() + ",   Date2 " + bi.date2.getText().toString() + ",   Differ " + differ, Toast.LENGTH_LONG).show();
 
             long years = differ / 365 >= 1 ? differ / 365 : 0;
-            long months = differ % 365 >= 1 ? differ % 365 / 30 : 0;
+            long months = (differ % 365) / 30 >= 1 ? (differ % 365) / 30 : 0;
             //long days = months%1;
             long days = (differ % 365) % 30 >= 1 ? (differ % 365) % 30 : 0;
 
 
             //bi.differ.setTextColor(ContextCompat.getColor(this, R.color.white));
-
-            bi.differ.setBackgroundColor(ContextCompat.getColor(this, R.color.green4));
-            bi.year.setBackgroundColor(ContextCompat.getColor(this, R.color.green1));
-            bi.month.setBackgroundColor(ContextCompat.getColor(this, R.color.green2));
-            bi.days.setBackgroundColor(ContextCompat.getColor(this, R.color.green3));
+            //bi.differ.setBackgroundColor(ContextCompat.getColor(this, R.color.green4));
 
             bi.differ.setText(differ + " Total Days");
             bi.year.setText(years + " Years");

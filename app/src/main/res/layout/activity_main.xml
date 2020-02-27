@@ -14,14 +14,12 @@
 
     </data>
 
-    <LinearLayout style="@style/linearlayout_view">
+    <LinearLayout style="@style/vlinearlayout">
 
         <!-- Date1 - Date2 -->
         <androidx.cardview.widget.CardView style="@style/cardView">
 
-            <LinearLayout
-                style="@style/linearlayout_view"
-                android:orientation="horizontal">
+            <LinearLayout style="@style/hlinearlayout">
 
                 <TextView
                     style="@style/i_textview"
@@ -61,56 +59,65 @@
         <!--DateCheck-->
         <androidx.cardview.widget.CardView style="@style/cardView">
 
-            <LinearLayout
-                style="@style/linearlayout_view"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/differ"
-                    style="@style/i_textview"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:text="Total"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+            <LinearLayout style="@style/hlinearlayout">
 
                 <TextView
                     android:id="@+id/year"
                     style="@style/i_textview"
-                    android:layout_margin="10dp"
+                    android:layout_width="0dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="years"
-                    android:textSize="30sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/month"
                     style="@style/i_textview"
-                    android:layout_margin="10dp"
+                    android:layout_width="0dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="months"
-                    android:textSize="30sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/days"
                     style="@style/i_textview"
-                    android:layout_margin="10dp"
+                    android:layout_width="0dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="days"
-                    android:textSize="30sp"
                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--DateCheck-->
+        <androidx.cardview.widget.CardView style="@style/cardView">
+
+            <LinearLayout style="@style/vlinearlayout">
 
                 <Button
                     android:id="@+id/btnCheck"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
                     android:background="@android:color/holo_green_light"
                     android:onClick='@{() -> callback.BtnCheck()}'
                     android:text="Check"
                     android:textColor="@color/white"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/differ"
+                    style="@style/i_textview"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="Total"
                     android:textStyle="bold" />
 
             </LinearLayout>
