@@ -14,7 +14,9 @@
 
     </data>
 
-    <LinearLayout style="@style/vlinearlayout">
+    <LinearLayout
+        style="@style/vlinearlayout"
+        android:layout_margin="10dp">
 
         <!-- Date1 - Date2 -->
         <androidx.cardview.widget.CardView style="@style/cardView">
@@ -100,6 +102,14 @@
 
             <LinearLayout style="@style/vlinearlayout">
 
+                <TextView
+                    android:id="@+id/differ"
+                    style="@style/i_textview"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="Total"
+                    android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/btnCheck"
                     android:layout_width="match_parent"
@@ -110,14 +120,6 @@
                     android:text="Check"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/differ"
-                    style="@style/i_textview"
-                    android:layout_margin="5dp"
-                    android:gravity="center"
-                    android:text="Total"
                     android:textStyle="bold" />
 
             </LinearLayout>
