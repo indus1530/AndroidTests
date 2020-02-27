@@ -1,9 +1,13 @@
 package com.example.isd.videoss;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
 import com.example.isd.videoss.databinding.ActivityMainBinding;
@@ -12,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.concurrent.TimeUnit;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding bi;
 
@@ -35,14 +39,38 @@ public class MainActivity extends Activity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @SuppressLint("SimpleDateFormat")
     public void BtnCheck() {
 
         bi.date1.getText().toString();
         bi.date2.getText().toString();
 
-        bi.check.setText((int) getDateDiff(new SimpleDateFormat("dd/MM/yyyy"), bi.date1.getText().toString(), bi.date2.getText().toString()));
+        long differ = getDateDiff(new SimpleDateFormat("dd-MM-yyyy"), bi.date1.getText().toString(), bi.date2.getText().toString());
+        long years = differ / 365;
+        long months = years / 30;
+        long days = years % 12;
 
-        Toast.makeText(this, bi.date1.getText().toString() + "date" + bi.date2.getText().toString(), Toast.LENGTH_LONG).show();
+
+        if (differ < 0) {
+            Toast.makeText(this, " Date is invalid " + differ, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, " Date1 " + bi.date1.getText().toString() + ",   Date2 " + bi.date2.getText().toString() + ",   Differ " + differ, Toast.LENGTH_LONG).show();
+
+            //bi.differ.setTextColor(ContextCompat.getColor(this, R.color.white));
+
+            bi.differ.setBackgroundColor(ContextCompat.getColor(this, R.color.green4));
+            bi.year.setBackgroundColor(ContextCompat.getColor(this, R.color.green1));
+            bi.month.setBackgroundColor(ContextCompat.getColor(this, R.color.green2));
+            bi.days.setBackgroundColor(ContextCompat.getColor(this, R.color.green3));
+
+            bi.differ.setText(differ + " Total Days");
+            bi.year.setText(years + " Years");
+            bi.month.setText(months + " Months");
+            bi.days.setText(days + " Days");
+
+        }
+
 
         /*if (formValidation()) {
             try {

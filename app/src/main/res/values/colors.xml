@@ -30,6 +30,10 @@
     <color name="year">#999999</color>
     <color name="title">#222222</color>
     <color name="green">#4caf50</color>
+    <color name="green1">#66bb6a</color>
+    <color name="green2">#81c784</color>
+    <color name="green3">#a5d6a7</color>
+    <color name="green4">#00e676</color>
     <color name="red">#f44336</color>
 
     <color name="darkRed">#D50000</color>

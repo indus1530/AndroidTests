@@ -14,19 +14,16 @@
 
     </data>
 
-    <LinearLayout
-        style="@style/linearlayout_view"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl">
+    <LinearLayout style="@style/linearlayout_view">
 
-        <TextView
+        <!--<TextView
             android:id="@+id/noview"
             style="@style/textview_fm_lst_h"
             android:gravity="center"
             android:text="Recycler View!" />
 
 
-        <!--pofpa15-->
+        &lt;!&ndash;pofpa15&ndash;&gt;
         <androidx.cardview.widget.CardView
             android:id="@+id/pofpa15cv"
             style="@style/cardView">
@@ -172,7 +169,7 @@
 
             </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>-->
 
 
         <!-- Date1 - Date2 -->
@@ -223,31 +220,55 @@
 
             <LinearLayout
                 style="@style/linearlayout_view"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/differ"
+                    style="@style/i_textview"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="Total"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/year"
+                    style="@style/i_textview"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="years"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/month"
+                    style="@style/i_textview"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="months"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/days"
+                    style="@style/i_textview"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="days"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btnCheck"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:background="@android:color/holo_green_light"
                     android:onClick='@{() -> callback.BtnCheck()}'
                     android:text="Check"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/check"
-                    style="@style/i_textview"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@color/black_overlay"
-                    android:gravity="center"
-                    android:text="Date" />
 
             </LinearLayout>
 
