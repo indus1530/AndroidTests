@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
 
-
     }
 
 
@@ -52,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, " Date1 " + bi.date1.getText().toString() + ",   Date2 " + bi.date2.getText().toString() + ",   Differ " + differ, Toast.LENGTH_LONG).show();
 
-            long years = differ / 365 >= 1 ? differ / 365 : 0;
-            long months = (differ % 365) / 30 >= 1 ? (differ % 365) / 30 : 0;
+            long years = differ / 360 >= 1 ? differ / 360 : 0;
+            long months = (differ % 360) / 30 >= 1 ? (differ % 360) / 30 : 0;
             //long days = months%1;
-            long days = (differ % 365) % 30 >= 1 ? (differ % 365) % 30 : 0;
+            long days = (differ % 360) % 30 >= 1 ? (differ % 360) % 30 : 0;
 
 
             //bi.differ.setTextColor(ContextCompat.getColor(this, R.color.white));
