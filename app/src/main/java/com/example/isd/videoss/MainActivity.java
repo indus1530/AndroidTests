@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         if (differ < 0) {
             Toast.makeText(this, " Date is invalid " + differ, Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, " Date1 " + bi.date1.getText().toString() + ",   Date2 " + bi.date2.getText().toString() + ",   Differ " + differ, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, " Date1 " + bi.date1.getText().toString() + ",\nDate2 " + bi.date2.getText().toString() + ",\nDiffer " + differ + " Days", Toast.LENGTH_LONG).show();
 
             long years = differ / 360 >= 1 ? differ / 360 : 0;
             long months = (differ % 360) / 30 >= 1 ? (differ % 360) / 30 : 0;
