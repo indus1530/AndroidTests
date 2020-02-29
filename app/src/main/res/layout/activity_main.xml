@@ -105,7 +105,7 @@
                 <TextView
                     android:id="@+id/differ"
                     style="@style/i_textview"
-                    android:layout_margin="5dp"
+                    android:layout_margin="2dp"
                     android:gravity="center"
                     android:text="Total"
                     android:textStyle="bold" />
@@ -113,6 +113,7 @@
                 <Button
                     android:id="@+id/btnCheck"
                     style="@style/buttons"
+                    android:layout_margin="2dp"
                     android:background="@android:color/holo_green_light"
                     android:onClick='@{() -> callback.BtnCheck()}'
                     android:text="Check"
