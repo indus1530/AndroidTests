@@ -112,9 +112,7 @@
 
                 <Button
                     android:id="@+id/btnCheck"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    style="@style/buttons"
                     android:background="@android:color/holo_green_light"
                     android:onClick='@{() -> callback.BtnCheck()}'
                     android:text="Check"
