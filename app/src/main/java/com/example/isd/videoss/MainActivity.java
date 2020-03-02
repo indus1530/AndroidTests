@@ -87,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
 
         long elapsedSeconds = different / secondsInMilli;
 
-        System.out.printf(
-                "%d days, %d hours, %d minutes, %d seconds%n",
-                elapsedDays, elapsedHours, elapsedMinutes, elapsedSeconds);
+        Toast.makeText(this,
+                "%d days, %d hours, %d minutes, %d seconds%n" +
+                        elapsedDays + " " + " " + elapsedHours + " " + " " + elapsedMinutes + " " + " " + elapsedSeconds, Toast.LENGTH_LONG).show();
     }
 
 
