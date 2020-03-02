@@ -11,7 +11,6 @@ import androidx.databinding.DataBindingUtil;
 
 import com.example.isd.videoss.databinding.ActivityMainBinding;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding bi;
 
-    DateTimeUtils obj = new DateTimeUtils();
+    /*DateTimeUtils obj = new DateTimeUtils();
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/M/yyyy hh:mm:ss");
 
     try
@@ -48,12 +47,13 @@ public class MainActivity extends AppCompatActivity {
     {
         e.printStackTrace();
     }
-
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
+        printDifference(bi.date1.getText().toString());
 
 
     }

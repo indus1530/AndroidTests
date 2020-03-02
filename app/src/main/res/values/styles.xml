@@ -297,6 +297,20 @@
         <item name="android:elevation">1dp</item>
     </style>
 
+    <style name="textviewEdit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:drawable">@drawable/textview_background_grad</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
     <style name="i_textview1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
