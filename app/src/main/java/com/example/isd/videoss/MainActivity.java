@@ -11,8 +11,10 @@ import androidx.databinding.DataBindingUtil;
 
 import com.example.isd.videoss.databinding.ActivityMainBinding;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
-        printDifference(bi.date1.getText().toString());
 
 
     }
@@ -123,6 +124,14 @@ public class MainActivity extends AppCompatActivity {
 
             //bi.differ.setTextColor(ContextCompat.getColor(this, R.color.white));
             //bi.differ.setBackgroundColor(ContextCompat.getColor(this, R.color.green4));
+
+
+            SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
+            try {
+                printDifference(Objects.requireNonNull(format.parse(Objects.requireNonNull(bi.date1.getText()).toString())), Objects.requireNonNull(format.parse(Objects.requireNonNull(bi.date2.getText()).toString())));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
 
             bi.differ.setText(differ + " Total Days");
             bi.year.setText(years + " Years");
