@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, " OldDate " + bi.date1.getText().toString() + "\nNewDate " + bi.date2.getText().toString() + "\nDiffer " + differ + " Days", Toast.LENGTH_LONG).show();
 
-            long years = differ / 365 >= 1 ? differ / 365 : 0;
-            long months = (differ % 365) / 30 >= 1 || (differ % 365) / 30 <= 11 ? (differ % 365) / 30 : (differ % 365) / 30 == 12 ? years + 1 : 0;
+            long years = differ / 365 >= 1 ? differ / 365 : differ / 365 >= 1 && (differ % 365) / 30 == 12 ? differ / 365 + 1 : 0;
+            long months = (differ % 365) / 30 >= 1 && (differ % 365) / 30 <= 11 ? (differ % 365) / 30 : 0;
             //long days = months%1;
             long days = (differ % 365) % 30 >= 1 ? (differ % 365) % 30 : 0;
 
